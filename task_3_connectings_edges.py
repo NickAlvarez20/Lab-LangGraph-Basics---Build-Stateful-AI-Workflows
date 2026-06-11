@@ -75,17 +75,17 @@ print("Building your first graph:\n")
 
 # TODO 1: Create a StateGraph with our State
 # Hint: StateGraph takes State as parameter
-workflow = ___(State)  # Replace ___ with StateGraph
+workflow = StateGraph(State)  # Replace ___ with StateGraph
 
 # TODO 2: Add nodes to the graph
 # Hint: Use add_node method
 workflow.add_node("greet", greet_node)
-workflow.___("enhance", enhance_node)  # Replace ___ with add_node
+workflow.add_node("enhance", enhance_node)  # Replace ___ with add_node
 
 # TODO 3: Connect nodes with edges
 # Hint: The flow should be: START → greet → enhance → END
 workflow.set_entry_point("greet")
-workflow.add_edge("greet", "___")  # Replace ___ with "enhance"
+workflow.add_edge("greet", "enhance")  # Replace ___ with "enhance"
 workflow.add_edge("enhance", END)
 
 # Compile the graph
