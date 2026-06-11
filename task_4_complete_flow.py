@@ -73,7 +73,7 @@ def review_node(state: State):
     print("  🔄 Reviewing and finalizing...")
     time.sleep(2)  # Visualize processing time
     final = f"Final: Reviewed and polished content about '{state['topic']}'. Ready to publish!"
-    return {"___": final}  # Replace ___ with "final"
+    return {"final": final}  # Replace ___ with "final"
 
 print("Building multi-step workflow:\n")
 
@@ -84,13 +84,13 @@ workflow = StateGraph(State)
 # Hint: Use add_node for each node
 workflow.add_node("outline", outline_node)
 workflow.add_node("draft", draft_node)
-workflow.add_node("___", ___)  # Replace ___ with "review", review_node
+workflow.add_node("review", review_node)  # Replace ___ with "review", review_node
 
 # TODO 3: Connect all nodes in sequence
 # Hint: outline → draft → review → END
 workflow.set_entry_point("outline")
 workflow.add_edge("outline", "draft")
-workflow.add_edge("draft", "___")  # Replace ___ with "review"
+workflow.add_edge("draft", "review")  # Replace ___ with "review"
 workflow.add_edge("review", END)
 
 # Compile and run
