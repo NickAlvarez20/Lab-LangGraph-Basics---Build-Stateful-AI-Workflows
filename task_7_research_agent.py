@@ -72,7 +72,7 @@ llm = ChatOpenAI(
 
 # TODO 1: Initialize DuckDuckGo search
 # Hint: Create DDGS() instance
-ddgs = ___()  # Replace ___ with DDGS
+ddgs = DDGS()  # Replace ___ with DDGS
 
 # Classify query type
 def classify_query(state: State):
@@ -118,7 +118,7 @@ def calculator_tool(state: State):
     print(f"  ✅ Calculator result: {answer}")
     time.sleep(1)  # Show result
 
-    return {"___": f"Calculation result: {answer}"}  # Replace ___ with "result"
+    return {"result": f"Calculation result: {answer}"}  # Replace ___ with "result"
 
 # TODO 3: Complete the search_tool
 # Hint: Use ddgs.text() to search
@@ -130,7 +130,7 @@ def search_tool(state: State):
 
     try:
         # Perform the search
-        results = ___.text(state["query"], max_results=2)  # Replace ___ with ddgs
+        results = ddgs.text(state["query"], max_results=2)  # Replace ___ with ddgs
 
         if results:
             print(f"  ✅ Found {len(results)} results")
