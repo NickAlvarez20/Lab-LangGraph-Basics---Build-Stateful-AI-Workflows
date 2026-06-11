@@ -23,16 +23,16 @@ print("📚 Task 1: Understanding Imports\n")
 
 # TODO 1: Import StateGraph and END from langgraph.graph
 # Hint: from langgraph.graph import StateGraph, END
-from langgraph.graph import ___, ___  # Replace with StateGraph, END
+from langgraph.graph import StateGraph, END  # Replace with StateGraph, END
 
 # TODO 2: Import TypedDict from typing
 # Hint: from typing import TypedDict
-from ___ import TypedDict  # Replace with typing
+from typing import TypedDict  # Replace with typing
 
 # TODO 3: Define State with messages list
 # Hint: messages should be type list
 class State(TypedDict):
-    messages: ___  # Replace with list
+    messages: list  # Replace with list
     next_step: str
 
 # Test that imports work
