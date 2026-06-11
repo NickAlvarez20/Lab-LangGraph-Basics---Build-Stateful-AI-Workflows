@@ -2,7 +2,7 @@
 
 ## Master the Fundamentals of Graph-Based AI - From Imports to Research Agent
 
-Welcome to Master LangGraph Basics! Learn to build AI applications step by step, starting from basic imports and progressing to a complete research assistant with multiple tools. | A guided intro to learning LangGraph and How to Build a Stateful AI Workflow| Follow along with the tutorial by signing up for an account at https://kodekloud.com and following the 6th https://learn.kodekloud.com/user/courses/youtube-labs-ai-agent-fundamentals/ tutorial in the cloud coding environment. You can watch the tutorial on YouTube as well: https://youtu.be/ZaPbP9DwBOE?si=HGZuFIkjd003qOKo
+Welcome to Master LangGraph Basics! Learn to build AI applications step by step, starting from basic imports and progressing to a complete research assistant with multiple tools. | A guided intro to learning LangGraph and How to Build a Stateful AI Workflow | Follow along with the tutorial by signing up for an account at https://kodekloud.com and following the 6th https://learn.kodekloud.com/user/courses/youtube-labs-ai-agent-fundamentals/ tutorial in the cloud coding environment. You can watch the tutorial on YouTube as well: https://youtu.be/ZaPbP9DwBOE?si=HGZuFIkjd003qOKo
 
 ## 🎯 Lab Objective
 
