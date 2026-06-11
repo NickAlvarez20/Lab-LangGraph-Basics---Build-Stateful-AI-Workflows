@@ -65,7 +65,7 @@ def greet_node(state: State):
     print("  🔄 Processing in greet_node...")
     time.sleep(2)  # Simulate processing time
     greeting = f"Hello, {state['name']}!"
-    return {"___": greeting}  # Replace ___ with "greeting"
+    return {"greeting": greeting}  # Replace ___ with "greeting"
 
 # TODO 2: Complete the enhance_node function
 # Hint: Add "How are you?" to the existing greeting
@@ -74,7 +74,7 @@ def enhance_node(state: State):
     print("  🔄 Processing in enhance_node...")
     time.sleep(2)  # Simulate processing time - helps visualize flow
     enhanced = state["greeting"] + " How are you?"
-    return {"greeting": ___}  # Replace ___ with enhanced
+    return {"greeting": enhanced}  # Replace ___ with enhanced
 
 # Test nodes directly (no graph needed yet!)
 print("Testing nodes manually:\n")
