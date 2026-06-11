@@ -104,7 +104,7 @@ def classify_node(state: State):
 # Hint: Route to "calculator" if is_math is True
 def router(state: State):
     """Routes to calculator or general response"""
-    if state["___"]:  # Replace ___ with "is_math"
+    if state["is_math"]:  # Replace ___ with "is_math"
         return "calculator"
     return "general"
 
@@ -137,7 +137,7 @@ def calculator_node(state: State):
     print("  ✅ Calculator returned result")
     time.sleep(1)  # Show result processing
 
-    return {"___": f"Answer: {answer}"}  # Replace ___ with "result"
+    return {"result": f"Answer: {answer}"}  # Replace ___ with "result"
 
 # General response for non-math queries
 def general_response_node(state: State):
@@ -164,7 +164,7 @@ workflow.add_conditional_edges(
     "classify",
     router,
     {
-        "___": "calculator",  # Replace ___ with "calculator"
+        "calculator": "calculator",  # Replace ___ with "calculator"
         "general": "general"
     }
 )
