@@ -62,7 +62,7 @@ def analyze_node(state: State):
 # Hint: Return "quick" for short queries, "detailed" for long
 def router(state: State):
     """Decides which path to take based on query length"""
-    if state["query_length"] == "___":  # Replace ___ with "short"
+    if state["query_length"] == "short":  # Replace ___ with "short"
         return "quick"
     return "detailed"
 
@@ -94,7 +94,7 @@ workflow.add_node("detailed", detailed_response_node)
 
 # TODO 2: Set the entry point
 # Hint: Start with "analyze" node
-workflow.___("analyze")  # Replace ___ with set_entry_point
+workflow.set_entry_point("analyze")  # Replace ___ with set_entry_point
 
 # TODO 3: Add conditional edges based on router
 # Hint: Map router outputs to node names
@@ -104,7 +104,7 @@ workflow.add_conditional_edges(
     router,
     {
         "quick": "quick",      # When router returns "quick" → go to "quick" node
-        "___": "detailed"  # Replace ___ with "detailed" - router returns this string!
+        "detailed": "detailed"  # Replace ___ with "detailed" - router returns this string!
     }
 )
 
